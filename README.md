@@ -71,8 +71,8 @@ When you open the app:
 ## 💻 Local Development
 
 ```bash
-git clone https://github.com/yourusername/virtual-assistant-2.0.git
-cd virtual-assistant-2.0
+git clone https://github.com/yourusername/virtual-assistant.git
+cd virtual-assistant
 pip install -r requirements.txt
 uvicorn main:app --reload
 ````
