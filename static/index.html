@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>VA2</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <h1 id="mainTitle">Virtual Assistant 2.0</h1>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- API Key Setup (top-left-ish) -->
+      <div class="glass-container api-setup">
+        <h2>🔑 API Keys Setup</h2>
+        <div class="api-row">
+          <input type="text" id="assemblyKey" placeholder="AssemblyAI API Key" />
+          <input type="text" id="googleKey" placeholder="Google Gemini API Key" />
+        </div>
+        <div class="api-row">
+          <input type="text" id="murfKey" placeholder="Murf API Key" />
+          <input type="text" id="tavilyKey" placeholder="Tavily API Key" />
+        </div>
+        <div class="api-row">
+          <input type="text" id="weatherKey" placeholder="Weather API Key" />
+        </div>
+        <button id="saveKeysBtn">Save Keys</button>
+        <p id="keyStatus" class="muted-text"></p>
+      </div>
+
+      <!-- LEFT container -->
+      <div class="glass-container">
+        <h2>🎤 Live Transcription + 🔊 Playback</h2>
+        <button id="startBtn">Start</button>
+        <button id="stopBtn" disabled>Stop</button>
+
+        <div id="transcript"></div>
+
+        <!-- 🔊 Audio playback status -->
+        <div id="audioStatus" class="hidden">No audio playing</div>
+      </div>
+
+      <!-- RIGHT container -->
+      <div class="glass-container">
+        <h2>🔎 Websearch Response</h2>
+        <div id="tavilyResponse">Waiting for query...</div>
+      </div>
+    </div>
+
+    <!-- Load JS -->
+    <script src="/static/script.js"></script>
+  </body>
+
+  <!-- 🌦️ Weather Footer -->
+  <footer class="weather-footer">
+    <div class="weather-widget">
+      <div class="weather-search">
+        <input type="text" id="cityInput" placeholder="Enter city..." />
+        <button id="searchBtn">🔍</button>
+      </div>
+      <div id="weatherResult">
+        <h3 id="cityName">City</h3>
+        <img id="weatherIcon" src="" alt="Weather Icon" />
+        <p id="temperature"></p>
+        <p id="condition"></p>
+      </div>
+    </div>
+  </footer>
+</html>
